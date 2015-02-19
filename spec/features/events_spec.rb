@@ -36,6 +36,7 @@ feature 'You should be able to visit the root path and see something' do
     visit root_path
     expect(page).to have_content('My aweeesome event')
     click_on 'delete'
+    expect(page).to have_no_content('My aweeesome event')
   end
 
   it 'should be able to view the show of an item' do
